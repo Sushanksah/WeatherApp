@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif; /* Use Roboto font for all elements */
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+/* Main container settings */
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Needed for the overlay effect */
+}
+
+/* Overlay effect for background image */
+.container::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity: 0.4;
+}
+
+/* Weather box styling */
+.weather {
+    z-index: 2; /* Place the weather box above the background image */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(180, 177, 177, 0.075); /* Semi-transparent background */
+    border-radius: 20px;
+}
+
+/* Spacing for the weather elements */
+.weather > div {
+    margin: 0.7rem;
+}
+
+/* Weather condition image styling */
+.weather3 img {
+    width: 2rem;
+}
+
+/* Margin for the condition text */
+.weather3 span {
+    margin: 0.4rem;
+}
+
+/* Temperature font size */
+.weather1 {
+    font-size: 4rem;
+}
+
+/* Location and date/time font size */
+.weather p {
+    font-size: 2rem;
+}
+
+/* Condition text font size */
+.weather span {
+    font-size: 0.89rem;
+}
+
+/* Navigation bar styling */
+nav {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    background-color: rgba(180, 177, 177, 0.050); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px 80px 0 0;
+    padding: 10px;
+}
+
+/* Styling for the form inside the nav */
+nav form {
+    display: flex;
+    width: 80%;
+}
+
+/* Search field styling */
+.searchField {
+    margin-right: 10px;
+    width: 80%;
+    font-size: 1.2rem;
+    outline: none;
+    padding: 15px 2px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px #fff solid; /* Bottom border */
+    color: #fff;
+}
+
+/* Search button styling */
+form button {
+    width: 30%;
+    border-radius: 5px 15px 15px 5px;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
